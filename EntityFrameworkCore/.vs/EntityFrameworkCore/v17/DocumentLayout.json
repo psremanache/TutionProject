@@ -1,0 +1,273 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\controllers\\tutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:controllers\\tutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\dbconnection\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:dbconnection\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Migrations\\20250127172354_UserAndRoleAdded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250127172354_UserAndRoleAdded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\entities\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:entities\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\entities\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:entities\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|e:\\practice\\entityframeworkcore\\entityframeworkcore\\migrations\\20250125151503_seedingtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED735F0-A751-498D-B6DB-0125609B6D71}|EntityFrameworkCore.csproj|solutionrelative:migrations\\20250125151503_seedingtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Migrations\\20250125101212_firstDataSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250125101212_firstDataSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAQwBwAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T17:09:04.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TutionController.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Controllers\\TutionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TutionController.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Controllers\\TutionController.cs",
+              "RelativeToolTip": "Controllers\\TutionController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAF8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T14:49:23.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAgwBUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T16:10:00.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JWTService.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Services\\JWTService.cs",
+              "RelativeDocumentMoniker": "Services\\JWTService.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Services\\JWTService.cs",
+              "RelativeToolTip": "Services\\JWTService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwAwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T16:06:35.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\DBConnection\\DataContext.cs",
+              "RelativeDocumentMoniker": "DBConnection\\DataContext.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\DBConnection\\DataContext.cs",
+              "RelativeToolTip": "DBConnection\\DataContext.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAASwFwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T09:19:56.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Entities\\User.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\User.cs",
+              "RelativeToolTip": "Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T16:04:05.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250127172354_UserAndRoleAdded.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Migrations\\20250127172354_UserAndRoleAdded.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250127172354_UserAndRoleAdded.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Migrations\\20250127172354_UserAndRoleAdded.cs",
+              "RelativeToolTip": "Migrations\\20250127172354_UserAndRoleAdded.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T17:23:54.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Role.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "Entities\\Role.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Role.cs",
+              "RelativeToolTip": "Entities\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T16:24:02.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Course.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Course.cs",
+              "RelativeDocumentMoniker": "Entities\\Course.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Course.cs",
+              "RelativeToolTip": "Entities\\Course.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T14:51:26.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Student.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "Entities\\Student.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Student.cs",
+              "RelativeToolTip": "Entities\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T14:50:50.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Enrollment.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Enrollment.cs",
+              "RelativeDocumentMoniker": "Entities\\Enrollment.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Enrollment.cs",
+              "RelativeToolTip": "Entities\\Enrollment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T14:52:10.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Instructor.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Instructor.cs",
+              "RelativeDocumentMoniker": "Entities\\Instructor.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Entities\\Instructor.cs",
+              "RelativeToolTip": "Entities\\Instructor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T14:51:42.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-27T16:12:41.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20250125151503_SeedingTable.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Migrations\\20250125151503_SeedingTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250125151503_SeedingTable.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Migrations\\20250125151503_SeedingTable.cs",
+              "RelativeToolTip": "Migrations\\20250125151503_SeedingTable.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T15:15:03.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250125101212_firstDataSetup.cs",
+              "DocumentMoniker": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Migrations\\20250125101212_firstDataSetup.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250125101212_firstDataSetup.cs",
+              "ToolTip": "E:\\practice\\EntityFrameworkCore\\EntityFrameworkCore\\Migrations\\20250125101212_firstDataSetup.cs",
+              "RelativeToolTip": "Migrations\\20250125101212_firstDataSetup.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T10:12:12.647Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
