@@ -32,7 +32,7 @@ namespace EntityFrameworkCore.Controllers
             return Ok(res);
         }
 
-        [Authorize(Roles = "Admin,Instructor,Student")]
+        [Authorize(Roles = "Student")]
         [HttpGet("GetAllStudents")]
         public async Task<IActionResult> GetAllStudents()
         {

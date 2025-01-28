@@ -6,6 +6,6 @@
         public string FullName { get; set; }
 
         // Navigation property for courses taught by the instructor
-        public ICollection<Course> Courses { get; set; }
+        public ICollection<Course>? Courses { get; set; }
     }
 }

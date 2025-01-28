@@ -22,11 +22,23 @@ namespace EntityFrameworkCore.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            var user = await _dataContext.Users.FirstOrDefaultAsync(x => x.Username == request.Username && x.Password == request.Password);
-            if (user == null) 
-                return Unauthorized("Invalid credentials");
-
-            var token = _jwtService.GenerateToken(user.Username, user.Role.RoleName);
+            var userWithRole = await _dataContext.Users
+            .Where(x => x.Username == request.Username && x.Password == request.Password)
+            .Select(user => new User
+            {
+                Id = user.Id,
+                Username = user.Username,
+                Role = _dataContext.Roles
+                    .Where(role => role.RoleId == user.RoleId)
+                    .Select(role => role)
+                    .FirstOrDefault()
+            })
+            .FirstOrDefaultAsync(); 
+            
+            if (userWithRole == null)
+                        return Unauthorized("Invalid credentials");
+            
+            var token = _jwtService.GenerateToken(userWithRole.Username, userWithRole.Role.RoleName);
             return Ok(new { Token = token });
         }
 

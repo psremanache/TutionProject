@@ -7,9 +7,9 @@
 
         // Foreign key and navigation property for the instructor
         public int InstructorId { get; set; }
-        public Instructor Instructor { get; set; }
+        public Instructor? Instructor { get; set; }
 
         // Navigation property for many-to-many relationship
-        public ICollection<Enrollment> Enrollments { get; set; }
+        public ICollection<Enrollment>? Enrollments { get; set; }
     }
 }
