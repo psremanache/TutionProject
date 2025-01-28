@@ -1,4 +1,6 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using EntityFrameworkCore.Entities;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -7,13 +9,11 @@ namespace EntityFrameworkCore.Services
 {
     public class JwtService
     {
-        private readonly string _secret;
-        private readonly string _issuer;
+        private readonly JwtSettings _jwtSettings;
 
-        public JwtService(string secret, string issuer)
+        public JwtService(IOptions<JwtSettings> options)
         {
-            _secret = secret;
-            _issuer = issuer;
+            _jwtSettings = options.Value;
         }
 
         public string GenerateToken(string username, string role)
@@ -24,12 +24,12 @@ namespace EntityFrameworkCore.Services
                 new Claim(ClaimTypes.Role, role)
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secret));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Secret));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                issuer: _issuer,
-                audience: _issuer,
+                issuer: _jwtSettings.Issuer,
+                audience: _jwtSettings.Issuer,
                 claims: claims,
                 expires: DateTime.Now.AddHours(1),
                 signingCredentials: creds);

@@ -19,7 +19,7 @@ namespace EntityFrameworkCore.Controllers
             _jwtService = jwtService;
         }
 
-        [HttpPost]
+        [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
             var user = await _dataContext.Users.FirstOrDefaultAsync(x => x.Username == request.Username && x.Password == request.Password);
@@ -30,7 +30,7 @@ namespace EntityFrameworkCore.Controllers
             return Ok(new { Token = token });
         }
 
-        [HttpPost]
+        [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] User user)
         {
             _dataContext.Users.Add(user);

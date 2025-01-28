@@ -1,5 +1,7 @@
 
 using EntityFrameworkCore.DBConnection;
+using EntityFrameworkCore.Entities;
+using EntityFrameworkCore.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -32,7 +34,12 @@ namespace EntityFrameworkCore
                 };
             });
 
+            builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+
+            // Register JwtService
+            builder.Services.AddSingleton<JwtService>();
             builder.Services.AddAuthorization();
+            var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 
             // Add services to the container.
             builder.Services.AddDbContext<DataContext>(options =>
@@ -53,8 +60,6 @@ namespace EntityFrameworkCore
             }
 
             app.UseHttpsRedirection();
-
-            app.UseAuthorization();
 
 
             app.MapControllers();

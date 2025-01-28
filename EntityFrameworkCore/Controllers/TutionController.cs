@@ -11,7 +11,7 @@ namespace EntityFrameworkCore.Controllers
     [ApiController]
     public class TutionController : ControllerBase
     {
-        public readonly DataContext _dataContext;
+        private readonly DataContext _dataContext;
         public TutionController(DataContext dataContext) { 
             _dataContext = dataContext;
         }
