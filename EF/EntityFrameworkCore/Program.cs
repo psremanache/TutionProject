@@ -33,6 +33,16 @@ namespace EntityFrameworkCore
                     ValidAudience = jwtSettings["Issuer"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Secret"]))
                 };
+                options.Events = new JwtBearerEvents
+                {
+                    OnAuthenticationFailed = context =>
+                    {
+                        // Log the error message here
+                        Console.WriteLine("Authentication failed: " + context.Exception.Message);
+                        return Task.CompletedTask;
+                    }
+                };
+
             });
 
             builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
