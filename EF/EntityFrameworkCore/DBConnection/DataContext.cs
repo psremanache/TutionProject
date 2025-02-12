@@ -81,9 +81,9 @@ namespace EntityFrameworkCore.DBConnection
             );
 
             modelBuilder.Entity<Role>().HasData(
-                new Role { RoleId = 1, RoleName = "admin" },
-                new Role { RoleId = 2, RoleName = "student" },
-                new Role { RoleId = 3, RoleName = "instructor" }
+                new Role { RoleId = 1, RoleName = "Admin" },
+                new Role { RoleId = 2, RoleName = "Student" },
+                new Role { RoleId = 3, RoleName = "Instructor" }
                 );
         }
         public DbSet<Student> Students { get; set; }

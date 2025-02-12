@@ -15,11 +15,7 @@ namespace EntityFrameworkCore
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
                 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
@@ -49,7 +45,13 @@ namespace EntityFrameworkCore
 
             // Register JwtService
             builder.Services.AddSingleton<JwtService>();
-            builder.Services.AddAuthorization();
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Student", policy => policy.RequireRole("Student"));
+                options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
+                options.AddPolicy("Instructor", policy => policy.RequireRole("Instructor"));
+                options.AddPolicy("AllPolicy", policy => policy.RequireRole("Student","Instructor","Admin"));
+            });
             var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 
             // Add services to the container.

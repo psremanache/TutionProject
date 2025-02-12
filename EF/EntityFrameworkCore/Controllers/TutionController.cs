@@ -40,7 +40,7 @@ namespace EntityFrameworkCore.Controllers
             return Ok(res);
         }
 
-        [Authorize(Roles = "Admin,Instructor,Student")]
+        [Authorize(Policy = "AllPolicy")]
         [HttpGet("GetStudentById/{id:int}")]
         public async Task<IActionResult> GetStudentById([FromRoute] int id)
         {
