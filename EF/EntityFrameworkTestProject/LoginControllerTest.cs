@@ -6,40 +6,33 @@ using System.Text;
 namespace EntityFrameworkTestProject
 {
     [TestFixture]
-    public class LoginControllerTest
+    public class LoginControllerTest: BaseTestApi
     {
-        private HttpClient _client;
-
-        [SetUp]
-        public void Setup()
-        {
-            var factory = new CustomWebApplicationFactory();
-            _client = factory.CreateClient();
-        }
-        [TearDown]
-        public void TearDown()
-        {
-            _client.Dispose();
-        }
+        
         [Test]
         public async Task Login_ExistingUser_ReturnsOk()
         {
             // Act
-            var newUser = new User { Username = "psremanache",Password="psr@123" };
+            var newUser = new LoginRequest { Username = "psremanache",Password="psr@123" };
             var jsonContent = new StringContent(JsonConvert.SerializeObject(newUser), Encoding.UTF8, "application/json");
 
             var response = await _client.PostAsync("/api/Login/Login", jsonContent);
 
             // Assert
-            Assert.AreEqual(200, (int)response.StatusCode);
+            Assert.That((int)response.StatusCode, Is.EqualTo(200));
+            Assert.That(response.Content, Is.Not.Null);
         }
 
         [Test]
-        public async Task GetUser_NonExistingUser_ReturnsNotFound()
+        public async Task Create_NewUser_ReturnsOk()
         {
-            var response = await _client.GetAsync("/api/users/99");
+            var newUser = new User { Username = "psremanache", Password = "psr@123", RoleId = 2 };
+            var jsonContent = new StringContent(JsonConvert.SerializeObject(newUser), Encoding.UTF8, "application/json");
 
-            Assert.AreEqual(404, (int)response.StatusCode);
+            var response = await _client.PostAsync("/api/Login/Register", jsonContent);
+
+            // Assert
+            Assert.That((int)response.StatusCode, Is.EqualTo(200));
         }
     }
 }
