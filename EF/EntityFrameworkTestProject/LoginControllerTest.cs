@@ -19,9 +19,9 @@ namespace EntityFrameworkTestProject
     {
         
         [Test]
-        [TestCase("psremanache", "psr@123")]
-        [TestCase("psremanache", "psr@123")]
-        public async Task Login_ExistingUser_ReturnsOk(string userName,string password)
+        [TestCase("psremanache", "psr@123",200)]
+        [TestCase("psr", "psr@123",401)]
+        public async Task Login_ExistingUser_ReturnsOk(string userName,string password,int expectedStatusCode)
         {
             // Act
             var newUser = new LoginRequest { Username = userName, Password=password };
@@ -30,7 +30,7 @@ namespace EntityFrameworkTestProject
             var response = await _client.PostAsync("/api/Login/Login", jsonContent);
 
             // Assert
-            Assert.That((int)response.StatusCode, Is.EqualTo(200));
+            Assert.That((int)response.StatusCode, Is.EqualTo(expectedStatusCode));
             Assert.That(response.Content, Is.Not.Null);
         }
 
