@@ -5,15 +5,26 @@ using System.Text;
 
 namespace EntityFrameworkTestProject
 {
+    public class UserTestData
+    {
+        public static IEnumerable<TestCaseData> Users()
+        {
+            yield return new TestCaseData(new User { Username = "psremanache",Password="psr@123",RoleId=1 });
+            yield return new TestCaseData(new User { Username = "psremanache", Password = "psr@123", RoleId = 10 });
+            yield return new TestCaseData(new User { Username = "psremanache", Password = "psr@123", RoleId = 2 });
+        }
+    }
     [TestFixture]
     public class LoginControllerTest: BaseTestApi
     {
         
         [Test]
-        public async Task Login_ExistingUser_ReturnsOk()
+        [TestCase("psremanache", "psr@123")]
+        [TestCase("psremanache", "psr@123")]
+        public async Task Login_ExistingUser_ReturnsOk(string userName,string password)
         {
             // Act
-            var newUser = new LoginRequest { Username = "psremanache",Password="psr@123" };
+            var newUser = new LoginRequest { Username = userName, Password=password };
             var jsonContent = new StringContent(JsonConvert.SerializeObject(newUser), Encoding.UTF8, "application/json");
 
             var response = await _client.PostAsync("/api/Login/Login", jsonContent);
@@ -24,15 +35,22 @@ namespace EntityFrameworkTestProject
         }
 
         [Test]
-        public async Task Create_NewUser_ReturnsOk()
+        [TestCaseSource(typeof(UserTestData), nameof(UserTestData.Users))]
+        public async Task Create_NewUser_ReturnsOk(User newUser)
         {
-            var newUser = new User { Username = "psremanache", Password = "psr@123", RoleId = 2 };
             var jsonContent = new StringContent(JsonConvert.SerializeObject(newUser), Encoding.UTF8, "application/json");
 
             var response = await _client.PostAsync("/api/Login/Register", jsonContent);
+            var responseBody = await response.Content.ReadAsStringAsync();
+            var user = JsonConvert.DeserializeObject<User>(responseBody);
 
             // Assert
-            Assert.That((int)response.StatusCode, Is.EqualTo(200));
+            Assert.Multiple(() =>
+            {
+                Assert.That((int)response.StatusCode, Is.EqualTo(200), "Expected status code 200 Created");
+                Assert.IsNotNull(user, "Created user should not be null");
+                Assert.That(user.Username, Is.EqualTo("psremanache"), "User name should match");
+            });
         }
     }
 }
