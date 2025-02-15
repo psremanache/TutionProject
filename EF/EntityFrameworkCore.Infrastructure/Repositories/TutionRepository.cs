@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFrameworkCore.Infrastructure
+namespace EntityFrameworkCore.Infrastructure.Repositories
 {
-    public class LoginRepository:ILoginRepository
+    public class TutionRepository : ITutionRepository
     {
     }
 }
