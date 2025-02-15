@@ -10,4 +10,8 @@
     <Folder Include="Entities\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFrameworkCore\EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
 </Project>

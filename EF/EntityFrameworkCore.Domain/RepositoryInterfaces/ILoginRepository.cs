@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityFrameworkCore.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace EntityFrameworkCore.Domain.RepositoryInterfaces
 {
     public interface ILoginRepository
     {
-
+        public Task<string> Login(LoginRequest request);
+        public Task<User> Register(User user);
     }
 }

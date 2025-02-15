@@ -21,7 +21,7 @@ namespace EntityFrameworkCore.Infrastructure.Repositories
             _dataContext = dataContext;
             _jwtService = jwtService;
         }
-        public async Task<string> Login([FromBody] LoginRequest request)
+        public async Task<string> Login(LoginRequest request)
         {
             var userWithRole = await _dataContext.Users
             .Where(x => x.Username == request.Username && x.Password == request.Password)
@@ -43,7 +43,7 @@ namespace EntityFrameworkCore.Infrastructure.Repositories
             return token;
         }
 
-        public async Task<User> Register([FromBody] User user)
+        public async Task<User> Register(User user)
         {
             _dataContext.Users.Add(user);
             await _dataContext.SaveChangesAsync();

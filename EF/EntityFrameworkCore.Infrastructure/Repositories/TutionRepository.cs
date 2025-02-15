@@ -26,7 +26,7 @@ namespace EntityFrameworkCore.Infrastructure.Repositories
             return res;
         }
 
-        public async Task<Course?> GetAllCourses([FromRoute] int id)
+        public async Task<Course?> GetAllCourses(int id)
         {
             var res = await _dataContext.Courses.FindAsync(id);//finds by primary key
             return res;
@@ -38,28 +38,28 @@ namespace EntityFrameworkCore.Infrastructure.Repositories
             return res;
         }
 
-        public async Task<Student?> GetStudentById([FromRoute] int id)
+        public async Task<Student?> GetStudentById(int id)
         {
             var res = await _dataContext.Students.Where(x => x.StudentId == id).FirstOrDefaultAsync();
             //var res = await _dataContext.Students.Where(x => x.StudentId == id).FirstAsync();//breaks if we get null
             return res;
         }
 
-        public async Task<List<Student>> GetStudentInList([FromBody] List<int> ids)
+        public async Task<List<Student>> GetStudentInList(List<int> ids)
         {
             var res = await _dataContext.Students.Where(x => ids.Contains(x.StudentId)).ToListAsync();
             //var res = await _dataContext.Students.Where(x => x.StudentId == id).FirstAsync();//breaks if we get null
             return res;
         }
 
-        public async Task<Student?> GetStudentById([FromRoute] string name, [FromRoute] int id)
+        public async Task<Student?> GetStudentById(string name,int id)
         {
             var res = await _dataContext.Students.Where(x => x.StudentId == id && x.Name == name).FirstOrDefaultAsync();
             //var res = await _dataContext.Students.Where(x => x.StudentId == id).FirstAsync();//breaks if we get null
             return res;
         }
 
-        public async Task<List<Student?>> GetAllStudentEnrolledInCourse([FromRoute] int courseId)
+        public async Task<List<Student?>> GetAllStudentEnrolledInCourse(int courseId)
         {
             var studentsInCourse = await _dataContext.Enrollments
              .Where(e => e.CourseId == courseId)
@@ -75,7 +75,7 @@ namespace EntityFrameworkCore.Infrastructure.Repositories
             return res;
         }
 
-        public async Task<Instructor?> GetInstructorById([FromRoute] int id)
+        public async Task<Instructor?> GetInstructorById(int id)
         {
             //var res = await _dataContext.Instructors.Where(x => x.InstructorId == id).SingleAsync();// breaks if we get null and if multiple records found
             var res = await _dataContext.Instructors.Where(x => x.InstructorId == id).SingleOrDefaultAsync();//breaks if  multiple records found
@@ -109,28 +109,28 @@ namespace EntityFrameworkCore.Infrastructure.Repositories
             return true;
         }
 
-        public async Task<bool> SaveCourse([FromBody] Course course)
+        public async Task<bool> SaveCourse(Course course)
         {
             _dataContext.Courses.Add(course);
             await _dataContext.SaveChangesAsync();
             return true;
         }
 
-        public async Task<Enrollment> SaveEnrollment([FromBody] Enrollment enrollment)
+        public async Task<Enrollment> SaveEnrollment(Enrollment enrollment)
         {
             _dataContext.Enrollments.Add(enrollment);
             await _dataContext.SaveChangesAsync();
             return enrollment;//returns with enrollment id 
         }
 
-        public async Task<Student> SaveStudent([FromBody] Student student)
+        public async Task<Student> SaveStudent(Student student)
         {
             _dataContext.Students.Add(student);
             await _dataContext.SaveChangesAsync();
             return student;//returns with student id
         }
 
-        public async Task<Instructor> SaveInstructor([FromBody] Instructor instructor)
+        public async Task<Instructor> SaveInstructor(Instructor instructor)
         {
             _dataContext.Instructors.Add(instructor);
             await _dataContext.SaveChangesAsync();
