@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EntityFrameworkCore.Domain\EntityFrameworkCore.Domain.csproj" />
+	  <ProjectReference Include="..\EntityFrameworkCore.Application\EntityFrameworkCore.Application.csproj" />
     <ProjectReference Include="..\EntityFrameworkCore\EntityFrameworkCore.csproj" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1">
 		  <PrivateAssets>all</PrivateAssets>

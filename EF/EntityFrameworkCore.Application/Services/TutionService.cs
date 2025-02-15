@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFrameworkCore.Application
+namespace EntityFrameworkCore.Application.Services
 {
-    public class TutionService:ITutionService
+    public class TutionService : ITutionService
     {
         private readonly ITutionRepository _tutionRepository;
         public TutionService(ITutionRepository tutionRepository)
@@ -19,7 +19,7 @@ namespace EntityFrameworkCore.Application
         }
         public Task<List<Course>> GetAllCourses()
         {
-           return _tutionRepository.GetAllCourses();
+            return _tutionRepository.GetAllCourses();
         }
         public Task<Course?> GetAllCourses(int id)
         {
@@ -40,7 +40,7 @@ namespace EntityFrameworkCore.Application
         }
         public Task<Student?> GetStudentById(string name, int id)
         {
-            return _tutionRepository.GetStudentById(name,id);
+            return _tutionRepository.GetStudentById(name, id);
         }
         public Task<List<Student?>> GetAllStudentEnrolledInCourse(int courseId)
         {

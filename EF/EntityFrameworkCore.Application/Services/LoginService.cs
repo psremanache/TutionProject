@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFrameworkCore.Application
+namespace EntityFrameworkCore.Application.Services
 {
-    public class LoginService:ILoginService
+    public class LoginService : ILoginService
     {
         private readonly ILoginRepository _loginRepository;
-        public LoginService(ILoginRepository loginRepository) {
+        public LoginService(ILoginRepository loginRepository)
+        {
             _loginRepository = loginRepository;
         }
 
         public Task<string> Login(LoginRequest request)
         {
-           return _loginRepository.Login(request);
+            return _loginRepository.Login(request);
         }
 
         public Task<User> Register(User user)
