@@ -9,7 +9,7 @@ namespace EntityFrameworkCore.Domain.RepositoryInterfaces
 {
     public interface ILoginRepository
     {
-        public Task<string> Login(LoginRequest request);
+        public Task<User?> Login(LoginRequest request);
         public Task<User> Register(User user);
     }
 }

@@ -1,6 +1,6 @@
 
-using EntityFrameworkCore.DBConnection;
 using EntityFrameworkCore.Entities;
+using EntityFrameworkCore.Infrastructure.Data;
 using EntityFrameworkCore.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;

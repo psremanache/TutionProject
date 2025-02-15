@@ -1,8 +1,6 @@
 ﻿using EntityFrameworkCore.Domain.RepositoryInterfaces;
 using EntityFrameworkCore.Entities;
 using EntityFrameworkCore.Infrastructure.Data;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

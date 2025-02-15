@@ -10,7 +10,7 @@
 	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.12" />
 	  <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.3.1" />
 	  <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.3.1" />
-    <ProjectReference Include="..\EntityFrameworkCore.Domain\EntityFrameworkCore.Domain.csproj" />
+	  <ProjectReference Include="..\EntityFrameworkCore.Infrastructure\EntityFrameworkCore.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,6 @@
 ﻿using EntityFrameworkCore.Domain.RepositoryInterfaces;
 using EntityFrameworkCore.Entities;
 using EntityFrameworkCore.Infrastructure.Data;
-using EntityFrameworkCore.Services;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,13 +13,11 @@ namespace EntityFrameworkCore.Infrastructure.Repositories
     public class LoginRepository : ILoginRepository
     {
         private readonly DataContext _dataContext;
-        private readonly JwtService _jwtService;
-        public LoginRepository(DataContext dataContext, JwtService jwtService)
+        public LoginRepository(DataContext dataContext)
         {
             _dataContext = dataContext;
-            _jwtService = jwtService;
         }
-        public async Task<string> Login(LoginRequest request)
+        public async Task<User?> Login(LoginRequest request)
         {
             var userWithRole = await _dataContext.Users
             .Where(x => x.Username == request.Username && x.Password == request.Password)
@@ -36,11 +32,7 @@ namespace EntityFrameworkCore.Infrastructure.Repositories
             })
             .FirstOrDefaultAsync();
 
-            if (userWithRole == null)
-                return string.Empty;
-
-            var token = _jwtService.GenerateToken(userWithRole.Username, userWithRole.Role.RoleName);
-            return token;
+            return userWithRole;
         }
 
         public async Task<User> Register(User user)

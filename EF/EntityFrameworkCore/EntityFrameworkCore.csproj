@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <ProjectReference Include="..\EntityFrameworkCore.Domain\EntityFrameworkCore.Domain.csproj" />
+	  <ProjectReference Include="..\EntityFrameworkCore.Application\EntityFrameworkCore.Application.csproj" />
 	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
