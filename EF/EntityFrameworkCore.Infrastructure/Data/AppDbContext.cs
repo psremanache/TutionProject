@@ -1,14 +1,18 @@
-﻿
-using EntityFrameworkCore.Entities;
+﻿using EntityFrameworkCore.Entities;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Emit;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace EntityFrameworkCore.DBConnection
+namespace EntityFrameworkCore.Infrastructure.Data
 {
-    public class DataContext:DbContext
+    public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options):base(options)
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -50,7 +54,7 @@ namespace EntityFrameworkCore.DBConnection
             .HasIndex(s => s.FullName)
             .IsUnique();
 
-             
+
 
             modelBuilder.Entity<Instructor>().HasData(
             new Instructor { InstructorId = 1, FullName = "Dr. John Smith" },

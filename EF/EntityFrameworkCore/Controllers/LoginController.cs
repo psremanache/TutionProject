@@ -1,9 +1,7 @@
-﻿using EntityFrameworkCore.DBConnection;
+﻿using EntityFrameworkCore.Domain.ServiceInterfaces;
 using EntityFrameworkCore.Entities;
-using EntityFrameworkCore.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace EntityFrameworkCore.Controllers
 {
@@ -11,42 +9,23 @@ namespace EntityFrameworkCore.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private readonly DataContext _dataContext;
-        private readonly JwtService _jwtService;
-        public LoginController(DataContext dataContext,JwtService jwtService)
+        private readonly ILoginService _loginService;
+        public LoginController(ILoginService loginService)
         {
-            _dataContext = dataContext;
-            _jwtService = jwtService;
+            _loginService = loginService;
         }
 
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            var userWithRole = await _dataContext.Users
-            .Where(x => x.Username == request.Username && x.Password == request.Password)
-            .Select(user => new User
-            {
-                Id = user.Id,
-                Username = user.Username,
-                Role = _dataContext.Roles
-                    .Where(role => role.RoleId == user.RoleId)
-                    .Select(role => role)
-                    .FirstOrDefault()
-            })
-            .FirstOrDefaultAsync(); 
-            
-            if (userWithRole == null)
-                        return Unauthorized("Invalid credentials");
-            
-            var token = _jwtService.GenerateToken(userWithRole.Username, userWithRole.Role.RoleName);
+            var token = await _loginService.Login(request);
             return Ok(new { Token = token });
         }
 
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] User user)
         {
-            _dataContext.Users.Add(user);
-            await _dataContext.SaveChangesAsync();
+            await _loginService.Register(user);
             return Ok(user);
         }
     }
